@@ -40,10 +40,12 @@ header img {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex: 1 1 25%; /* 各要素が1行の20%を占める */
+    box-sizing: border-box; /* パディングを含むサイズ計算 */
+    padding: 10px; /* アイテム間のスペース */
 }
 
 .repo a {
