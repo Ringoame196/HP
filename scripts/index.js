@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // 最新10件のリポジトリ情報をAPIから取得
-            const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=10&sort=created`);
+            // 最新9件のリポジトリ情報をAPIから取得
+            const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=9&sort=created`);
             const repos = await response.json();
             localStorage.setItem('repoData', JSON.stringify(repos));
             localStorage.setItem('cacheTime', Date.now().toString());
