@@ -1,60 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('viewPlugin');
-    
-    button.addEventListener('click', async () => {
-        // ボタンを無効にする
-        button.disabled = true;
+    const cacheDuration = 10 * 60 * 1000; // 10分
 
+    button.addEventListener('click', async () => {
+        button.disabled = true;
         const username = 'ringoame196-s-mcPlugin';
 
         async function fetchRepositories() {
-            const response = await fetch(`https://api.github.com/users/${username}/repos`);
+            // キャッシュがあれば利用し、なければAPIを呼び出す
+            const cachedData = JSON.parse(localStorage.getItem('repoData'));
+            const cacheTime = localStorage.getItem('cacheTime');
+
+            if (cachedData && cacheTime && (Date.now() - cacheTime < cacheDuration)) {
+                displayRepositories(cachedData);
+                console.log("キャッシュからデータを表示しました");
+                return;
+            }
+
+            // 最新10件のリポジトリ情報をAPIから取得
+            const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=10&sort=created`);
             const repos = await response.json();
-            const repoList = document.getElementById('repo-list');
-            repoList.innerHTML = ''; // リストをクリア
+            localStorage.setItem('repoData', JSON.stringify(repos));
+            localStorage.setItem('cacheTime', Date.now().toString());
 
-            // Promise.allで全てのリリース情報を取得する
-            const repoPromises = repos.map(async (repo) => {
-                const repoDiv = document.createElement('div');
-                repoDiv.classList.add('repo');
-
-                try {
-                    const releaseResponse = await fetch(`https://api.github.com/repos/${username}/${repo.name}/releases/latest`);
-                    if (releaseResponse.ok) {
-                        const releaseData = await releaseResponse.json();
-                        // リリースがある場合
-                        repoDiv.innerHTML = `
-                            <h2 id="title">${repo.name}</h2>
-                            <p>${repo.description || 'No description'}</p>
-                            <a href="${releaseData.html_url}" target="_blank">プラグイン表示</a>
-                        `;
-                    } else {
-                        // リリースがない場合
-                        repoDiv.innerHTML = `
-                            <h2 id="title">${repo.name}</h2>
-                            <p>${repo.description || 'No description'}</p>
-                            <p style="color: red;">配布されていません</p>
-                        `;
-                    }
-                } catch {
-                    // エラーハンドリング（リリース情報が取得できなかった場合）
-                    repoDiv.innerHTML = `
-                        <h2 id="title">${repo.name}</h2>
-                        <p>${repo.description || 'No description'}</p>
-                        <p style="color: red;">配布されていません</p>
-                    `;
-                }
-
-                return repoDiv; // 完成したrepoDivを返す
-            });
-
-            // 全てのプロミスが解決するのを待ってからDOMに追加
-            const repoDivs = await Promise.all(repoPromises);
-            repoDivs.forEach(repoDiv => repoList.appendChild(repoDiv));
+            displayRepositories(repos);
+            console.log("APIからリポジトリ情報を取得しました");
         }
 
-        // 関数を呼び出してリポジトリ情報を取得
+        function displayRepositories(repos) {
+            const repoList = document.getElementById('repo-list');
+            repoList.innerHTML = '';
+            repos.forEach(repo => {
+                const repoDiv = document.createElement('div');
+                repoDiv.classList.add('repo');
+                repoDiv.innerHTML = `
+                    <h2 id="title">${repo.name}</h2>
+                    <p>${repo.description || 'No description'}</p>
+                    <a href="${repo.html_url}" target="_blank">GitHubページへ</a>
+                `;
+                repoList.appendChild(repoDiv);
+            });
+        }
+
         await fetchRepositories();
-        console.log("リポジトリ情報を取得しました");
     });
 });
