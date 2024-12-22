@@ -1,0 +1,179 @@
+/* 背景と全体のスタイル */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* プロフィールセクション */
+.profile {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile #icon {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+.profile #title {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.profile #name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile #description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    display: inline-block;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* SNSボタンセクション */
+.button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button a {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.button a:hover {
+    transform: translateY(-5px);
+}
+
+.button button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.button button img {
+    width: 70%;
+    height: 70%;
+    filter: brightness(0) invert(1);
+}
+
+/* SNSボタンカスタムカラー */
+#github button {
+    background-color: #333;
+}
+
+#x button {
+    background-color: #1DA1F2;
+}
+
+#discord button {
+    background-color: #5865F2;
+}
+
+#namemc button {
+    background-color: #5A9F8E;
+}
+
+#pixiv button {
+    background-color: #0096FA;
+}
+
+/* プラグイン表示ボタン */
+#viewPlugin,#viewPluginButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#viewPluginButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#viewPluginButton:active {
+    transform: scale(0.95);
+}
+
+#repo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.repo {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.repo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.repo a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
