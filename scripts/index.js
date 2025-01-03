@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('viewPlugin');
+    const button = document.getElementById('viewPluginButton');
     const cacheDuration = 10 * 60 * 1000; // 10分
 
     button.addEventListener('click', async () => {
