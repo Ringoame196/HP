@@ -1,4 +1,4 @@
-/* 背景と全体のスタイル */
+/* 基本スタイル */
 body {
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* ヘッダー画像 */
 header img {
     width: 100%;
     height: auto;
@@ -28,20 +29,20 @@ header img {
 
 .profile #icon {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     margin: 10px auto;
 }
 
 .profile #title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #444;
     margin-bottom: 10px;
 }
 
 .profile #name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #555;
     margin-bottom: 10px;
@@ -52,18 +53,17 @@ header img {
     color: #666;
     line-height: 1.6;
     text-align: left;
-    display: inline-block;
-    max-width: 80%;
+    max-width: 90%;
     margin: 10px auto;
 }
 
-/* SNSボタンセクション */
+/* SNSボタン */
 .button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .button a {
@@ -79,7 +79,7 @@ header img {
     background-color: #fff;
     border: none;
     border-radius: 50%;
-    width: 65px;
+    width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -100,34 +100,20 @@ header img {
     filter: brightness(0) invert(1);
 }
 
-/* SNSボタンカスタムカラー */
-#github button {
-    background-color: #333;
-}
-
-#x button {
-    background-color: #1DA1F2;
-}
-
-#discord button {
-    background-color: #5865F2;
-}
-
-#namemc button {
-    background-color: #5A9F8E;
-}
-
-#pixiv button {
-    background-color: #0096FA;
-}
+/* SNSボタンのカスタムカラー */
+#github button { background-color: #333; }
+#x button { background-color: #1DA1F2; }
+#discord button { background-color: #5865F2; }
+#namemc button { background-color: #5A9F8E; }
+#pixiv button { background-color: #0096FA; }
 
 /* プラグイン表示ボタン */
-#viewPlugin,#viewPluginButton {
+#viewPlugin, #viewPluginButton {
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
     margin: 20px auto;
     display: block;
@@ -144,10 +130,11 @@ header img {
     transform: scale(0.95);
 }
 
+/* GitHubリポジトリ一覧 */
 #repo-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
     justify-content: center;
 }
@@ -156,7 +143,7 @@ header img {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 300px;
+    width: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 15px;
@@ -176,4 +163,51 @@ header img {
 
 .repo a:hover {
     text-decoration: underline;
+}
+
+/* プラグイン表示 */
+.plugin {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* スマホ向け調整 */
+@media (max-width: 768px) {
+    .profile #icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile #title {
+        font-size: 1.5rem;
+    }
+
+    .profile #name {
+        font-size: 1.2rem;
+    }
+
+    .profile #description {
+        font-size: 0.9rem;
+        max-width: 95%;
+    }
+
+    .button {
+        gap: 8px;
+    }
+
+    .button button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .repo {
+        width: 90%;
+    }
 }
