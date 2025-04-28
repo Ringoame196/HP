@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ベーススタイル */
 * {
   margin: 0;
@@ -6,9 +5,6 @@
   box-sizing: border-box;
 }
 
-=======
-/* 基本スタイル */
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #1a5336, #2a8c5f);
@@ -17,7 +13,6 @@ body {
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
 .container {
   width: 100%;
   max-width: 1200px;
@@ -60,13 +55,6 @@ header {
   overflow: hidden;
   padding: 80px 0 40px;
   text-align: center;
-=======
-/* ヘッダー画像 */
-header img {
-    width: 100%;
-    height: auto;
-    display: block;
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 }
 
 .profile {
@@ -74,7 +62,6 @@ header img {
   z-index: 10;
 }
 
-<<<<<<< HEAD
 .profile-image {
   width: 128px;
   height: 128px;
@@ -112,45 +99,6 @@ header img {
 .mcid .label {
   color: #34d399;
   font-family: monospace;
-=======
-.profile #icon {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin: 10px auto;
-}
-
-.profile #title {
-    font-size: 1.8rem;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.profile #name {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.profile #description {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    text-align: left;
-    max-width: 90%;
-    margin: 10px auto;
-}
-
-/* SNSボタン */
-.button {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 }
 
 .mcid .value {
@@ -165,7 +113,6 @@ header img {
   margin-top: 32px;
 }
 
-<<<<<<< HEAD
 .social-button {
   display: flex;
   align-items: center;
@@ -178,20 +125,6 @@ header img {
   cursor: pointer;
   transition: background-color 0.2s;
   text-decoration: none;
-=======
-.button button {
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 }
 
 .social-button:hover {
@@ -202,7 +135,6 @@ header img {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 /* カードスタイル */
 .cards-container {
   display: grid;
@@ -237,27 +169,6 @@ header img {
   font-size: 36px;
   margin-bottom: 16px;
   text-align: center;
-=======
-/* SNSボタンのカスタムカラー */
-#github button { background-color: #333; }
-#x button { background-color: #1DA1F2; }
-#discord button { background-color: #5865F2; }
-#namemc button { background-color: #5A9F8E; }
-#pixiv button { background-color: #0096FA; }
-
-/* プラグイン表示ボタン */
-#viewPlugin, #viewPluginButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
-    font-size: 1rem;
-    margin: 20px auto;
-    display: block;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 }
 
 .card-title {
@@ -273,7 +184,6 @@ header img {
   text-align: center;
 }
 
-<<<<<<< HEAD
 /* スキルバー */
 .skill-title {
   font-size: 20px;
@@ -289,26 +199,6 @@ header img {
   border-radius: 9999px;
   margin-bottom: 16px;
   overflow: hidden;
-=======
-/* GitHubリポジトリ一覧 */
-#repo-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.repo {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 280px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease;
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
 }
 
 .skill-progress {
@@ -326,7 +216,6 @@ header img {
   margin-bottom: 4px;
 }
 
-<<<<<<< HEAD
 /* プロジェクトセクション */
 .projects-section {
   margin-top: 64px;
@@ -524,51 +413,3 @@ a {
   margin: 0 auto;
   display: block;
 }
-=======
-/* プラグイン表示 */
-.plugin {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* スマホ向け調整 */
-@media (max-width: 768px) {
-    .profile #icon {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile #title {
-        font-size: 1.5rem;
-    }
-
-    .profile #name {
-        font-size: 1.2rem;
-    }
-
-    .profile #description {
-        font-size: 0.9rem;
-        max-width: 95%;
-    }
-
-    .button {
-        gap: 8px;
-    }
-
-    .button button {
-        width: 55px;
-        height: 55px;
-    }
-
-    .repo {
-        width: 90%;
-    }
-}
->>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d

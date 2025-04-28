@@ -54,12 +54,53 @@
           </div>
         </div>
 
-        <button id="viewPluginButton">プラグイン表示</button>
-        <p id="viewPlugin">※APIの関係で表示されない場合がこざいます</p>
+        <!-- スキルカード -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">💻</div>
+            <h2 class="card-title">スキル</h2>
+            <div>
+              <h3 class="skill-title">Kotlin</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
 
-        <div id="repo-list"></div>
+              <div class="skill-item">
+                <div class="skill-name">Minecraft Plugin</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 60%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name">Discord BOT</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- プロジェクトセクション -->
+      <div class="projects-section">
+        <h2 class="section-title">プロジェクト</h2>
+        <div id="project-carousel" class="carousel">
+          <div class="loading">
+            <div class="spinner"></div>
+            <p>プロジェクトを読み込み中...</p>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <script src="./scripts/index.js"></script>
+    <!-- フッター -->
+    <footer>
+      <p>© 2024 りんご飴196 - All rights reserved</p>
+    </footer>
+  </div>
+
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
