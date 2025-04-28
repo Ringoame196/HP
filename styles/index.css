@@ -1,0 +1,574 @@
+<<<<<<< HEAD
+/* ベーススタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+=======
+/* 基本スタイル */
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1a5336, #2a8c5f);
+  color: white;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+<<<<<<< HEAD
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* アニメーション */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ヘッダースタイル */
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 40px;
+  text-align: center;
+=======
+/* ヘッダー画像 */
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+}
+
+.profile {
+  position: relative;
+  z-index: 10;
+}
+
+<<<<<<< HEAD
+.profile-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #34d399;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.title .accent {
+  color: #f87171;
+}
+
+.mcid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  margin-bottom: 24px;
+}
+
+.mcid .label {
+  color: #34d399;
+  font-family: monospace;
+=======
+.profile #icon {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+.profile #title {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.profile #name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile #description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 90%;
+    margin: 10px auto;
+}
+
+/* SNSボタン */
+.button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+}
+
+.mcid .value {
+  font-weight: 600;
+}
+
+/* SNSリンク */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+<<<<<<< HEAD
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+=======
+.button button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+}
+
+.social-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-text {
+  font-weight: 500;
+}
+
+<<<<<<< HEAD
+/* カードスタイル */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.card-content {
+  padding: 32px;
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  text-align: center;
+=======
+/* SNSボタンのカスタムカラー */
+#github button { background-color: #333; }
+#x button { background-color: #1DA1F2; }
+#discord button { background-color: #5865F2; }
+#namemc button { background-color: #5A9F8E; }
+#pixiv button { background-color: #0096FA; }
+
+/* プラグイン表示ボタン */
+#viewPlugin, #viewPluginButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+<<<<<<< HEAD
+/* スキルバー */
+.skill-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  overflow: hidden;
+=======
+/* GitHubリポジトリ一覧 */
+#repo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.repo {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: #34d399;
+  border-radius: 9999px;
+}
+
+.skill-item {
+  margin-top: 24px;
+}
+
+.skill-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+<<<<<<< HEAD
+/* プロジェクトセクション */
+.projects-section {
+  margin-top: 64px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* カルーセル */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  height: 100%;
+  padding: 32px;
+}
+
+.project-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.project-icon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.language-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #34d399;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.project-link {
+  color: #34d399;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.project-link svg {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+/* カルーセルナビゲーション */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s;
+}
+
+.carousel-prev {
+  left: -20px;
+}
+
+.carousel-next {
+  right: -20px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carousel-dot.active {
+  background-color: white;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 32px 0;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 64px;
+}
+
+/* ローディング */
+.loading {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 4px solid currentColor;
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* リンク */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* GitHub アイコン */
+.github-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  display: block;
+}
+=======
+/* プラグイン表示 */
+.plugin {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* スマホ向け調整 */
+@media (max-width: 768px) {
+    .profile #icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile #title {
+        font-size: 1.5rem;
+    }
+
+    .profile #name {
+        font-size: 1.2rem;
+    }
+
+    .profile #description {
+        font-size: 0.9rem;
+        max-width: 95%;
+    }
+
+    .button {
+        gap: 8px;
+    }
+
+    .button button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .repo {
+        width: 90%;
+    }
+}
+>>>>>>> 03673f2bc3256e6fa16948c1cc820003a249b06d

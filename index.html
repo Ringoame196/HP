@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>りんご飴196 - ホームページ</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダーセクション -->
+    <header>
+      <div class="profile animate-fade-in-down">
+        <img src="./images/icon.jpg" alt="りんご飴196のプロフィール画像" class="profile-image" id="profile-image">
+        <h1 class="title">りんご飴<span class="accent">196</span></h1>
+        <div class="mcid">
+          <span class="label">MCID:</span>
+          <span class="value">Ringoame196</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://x.com/ringoame196" target="_blank" rel="noopener noreferrer" class="social-button">
+          <img src="./images/x.png" alt="X" width="25" height="25">
+          <span class="social-text">X</span>
+        </a>
+        <a href="https://github.com/Ringoame196" target="_blank" rel="noopener noreferrer" class="social-button">
+          <img src="./images/github.png" alt="GitHub" width="25" height="25">
+          <span class="social-text">GitHub</span>
+        </a>
+        <a href="https://qiita.com/Ringoame196" target="_blank" rel="noopener noreferrer" class="social-button">
+          <img src="./images/qiita.png" alt="Qiita" width="25" height="25">
+          <span class="social-text">Qiita</span>
+        </a>
+      </div>
+      
+      
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <!-- カードセクション -->
+      <div class="cards-container">
+        <!-- 自己紹介カード -->
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">👋</div>
+            <h2 class="card-title">自己紹介</h2>
+            <p class="card-text">
+              趣味でよくマイクラのプラグインやDiscordBOTを開発している マイクラ好きの人です。
+              主にKotlinを使っています。
+            </p>
+          </div>
+        </div>
+
+        <button id="viewPluginButton">プラグイン表示</button>
+        <p id="viewPlugin">※APIの関係で表示されない場合がこざいます</p>
+
+        <div id="repo-list"></div>
+    </main>
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
