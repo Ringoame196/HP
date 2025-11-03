@@ -12,12 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       description: "Kotlinで開発したマインクラフトのプラグイン。サーバー運営に役立つ様々な機能を追加します。",
       icon: "🧩",
       link: "https://github.com/ringoame196-s-mcPlugin"
-    },
-    {
-      title: "プラグインまとめ",
-      description: "開発したプラグインの詳細な一覧と説明。機能や使い方について詳しく解説しています。",
-      icon: "📝",
-      link: "https://fixed-yumberry-efb.notion.site/196-1a4ff0fcfd5c80af8ec5cd214f1fb29c"
     }
   ];
 
